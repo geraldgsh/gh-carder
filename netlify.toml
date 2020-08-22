@@ -4,4 +4,4 @@
 
 [context.production.environment]
   TOML_API_GKEY = "From netlify.toml"
-  REACT_APP_TOML_API_GKEY = "From netlify.toml (REACT_APP_)"
+  REACT_APP_TOML_API_GHKEY = "From netlify.toml (REACT_APP_)"
