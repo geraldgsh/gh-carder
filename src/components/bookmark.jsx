@@ -87,7 +87,7 @@ function SearchBar() {
 function Bookmark() {
   return (
     <div id="list" className="card-container">
-      {projects.map(project => (
+      {projects.slice(0, 4).map(project => (
         <div className="card" key={project.id}>
           <div className="card-image">
             <div className="avatar-header">
