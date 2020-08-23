@@ -1,0 +1,70 @@
+.card-container {
+  display: grid;
+  background: #fff;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 6fr));
+  grid-gap: 1em;
+  min-height: 90vh;
+  padding: 10px 10px 10px 10px;
+}
+
+.boxster {
+  margin-top: 5rem;
+}
+
+.avatar-header {
+  height: 240px;
+}
+
+.avatar {
+  padding-bottom: 5px;
+}
+
+.avatar img {
+  padding: 5px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+input {
+  font-weight: 300;
+}
+
+.pale {
+  background: #676a71;
+  height: 100px;
+}
+
+.user-meta {
+  .username {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .position {
+    font-size: 90%;
+    color: blue;
+  }
+}
+
+i {
+  padding: 10px 10px 10px 10px;
+}
+
+p {
+  font-weight: 700;
+}
+
+p.subtitle {
+  padding-top: 1rem;
+}
+
+.card {
+  color: black;
+  height: max-content;
+}
+
+.card-content {
+  height: 145px;
+}
