@@ -2,7 +2,10 @@ import { auth } from '../services/firebase';
 
 export function signInWithGitHub() {
   const provider = new auth.GithubAuthProvider();
-  return auth().signInWithPopup(provider);
+  auth().signInWithPopup(provider)
+    .then(result => {
+      console.log(result.additionalUserInfo.username);
+    });
 }
 
 export function logout() {

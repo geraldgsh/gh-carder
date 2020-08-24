@@ -6,6 +6,7 @@ import '../styles/main.scss';
 import { Bookmark, SearchBar } from '../components/bookmark';
 import Followers from '../components/followers';
 import Following from '../components/following';
+import UserProfile from '../components/userProfile';
 
 class Main extends Component {
   constructor(props) {
@@ -49,23 +50,7 @@ class Main extends Component {
               <div className="boxer">
                 <div className="columns is-gapless">
                   <div className="sidebar column is-3">
-                    <div className="rows columns is-centered is-gapless">
-                      <div className="row">
-                        <div className="column">
-                          <figure className="image is-128x128 pic">
-                            <img className="is-rounded" src="https://avatars3.githubusercontent.com/u/29500109?v=4" alt="profile pic" />
-                          </figure>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="rows columns is-centered is-gapless">
-                      <div className="row">
-                        <div className="wording column has-text-centered">
-                          <h1 className="title has-text-black">Gerald Goh</h1>
-                          <h2 className="subtitle has-text-black">Full Stack Developer</h2>
-                        </div>
-                      </div>
-                    </div>
+                    <UserProfile />
                     <div className="rows columns is-centered is-gapless">
                       <div className="container is-fluid">
                         <div className="column">
