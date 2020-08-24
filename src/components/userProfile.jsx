@@ -31,7 +31,7 @@ function UserProfile() {
           <div className="wording column has-text-centered">
             <h1 className="title has-text-black">{user.name}</h1>
             <h2 className="subtitle has-text-black">{user.company}</h2>
-            <h4 className="subtitle has-text-black">{user.bio}</h4>
+            <h3 className="subtitle has-text-black">{user.bio}</h3>
             <p>
               <strong>{user.followers}</strong>
               &nbsp;followers
