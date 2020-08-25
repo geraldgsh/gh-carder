@@ -1,9 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import { auth } from '../services/firebase';
 import '../styles/main.scss';
 
 import { Bookmark, SearchBar } from '../components/bookmark';
+import { logOut } from '../helpers/auth';
 import Followers from '../components/followers';
 import Following from '../components/following';
 import UserProfile from '../components/userProfile';
@@ -34,7 +34,16 @@ class Main extends Component {
     }
   }
 
+  async signOff() {
+    try {
+      await logOut();
+    } catch (error) {
+      this.setState({ error: error.message });
+    }
+  }
+
   render() {
+    const { error } = this.state;
     const sector = this.state.section;
     let search;
     if (sector.type.name === 'Bookmark') {
@@ -66,8 +75,11 @@ class Main extends Component {
                                 Following
                               </button>
                             </div>
+                            {error ? (
+                              <p className="text-danger">{error}</p>
+                            ) : null}
                             <div className="column buttons">
-                              <button className="button is-danger is-fullwidth" type="button" onClick={() => auth().signOut()}>Logout</button>
+                              <button className="button is-danger is-fullwidth" type="button" onClick={this.signOff}>Logout</button>
                             </div>
                           </div>
                         </div>

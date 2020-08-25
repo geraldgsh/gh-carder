@@ -4,9 +4,10 @@ import axios from 'axios';
 import '../styles/userProfile.scss';
 
 function UserProfile() {
+  const currentUser = localStorage.username;
   const [user, setUser] = useState([]);
   useEffect(() => {
-    axios('https://api.github.com/users/geraldgsh')
+    axios(`https://api.github.com/users/${currentUser}`)
       .then(response => {
         setUser(response.data);
       })

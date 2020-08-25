@@ -95,8 +95,8 @@ function Bookmark() {
                 <div className="column pale">
                   <br />
                   <div className="boxster">
-                    <figure className="avatar">
-                      <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="GH logo" />
+                    <figure className="avatar image is-128x128">
+                      <img src="https://avatars3.githubusercontent.com/u/29500109?v=4" alt="profile-pic" />
                     </figure>
                     <form>
                       <div className="user-meta has-text-centered">
