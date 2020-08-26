@@ -9,8 +9,9 @@ import '../styles/components.scss';
 config.autoAddCss = false;
 library.add(fab);
 
+const currentUser = localStorage.username;
+
 function Following() {
-  const currentUser = localStorage.username;
   const [followings, setFollowers] = useState([]);
   useEffect(() => {
     axios(`https://api.github.com/users/${currentUser}/following`)

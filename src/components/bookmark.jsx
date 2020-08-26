@@ -74,6 +74,7 @@ const projects = [
 function SearchBar() {
   const [user, setUser] = useState('');
   const dispatch = useDispatch();
+
   const handleSubmit = e => {
     e.preventDefault();
     axios(`https://api.github.com/users/${user}`)
@@ -94,9 +95,10 @@ function SearchBar() {
       });
     setUser('');
   };
+
   return (
     <div className="column social-media">
-      <form className="field has-addons" onSubmit={handleSubmit}>
+      <form className="field has-addons" onSubmit={e => handleSubmit(e)}>
         <input
           className="input"
           type="text"
@@ -154,10 +156,6 @@ function Bookmark() {
     </div>
   );
 }
-
-SearchBar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export {
   Bookmark,

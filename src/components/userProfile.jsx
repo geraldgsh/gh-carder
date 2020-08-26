@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/userProfile.scss';
 
+const currentUser = localStorage.username;
+
 function UserProfile() {
-  const currentUser = localStorage.username;
   const [user, setUser] = useState([]);
   useEffect(() => {
     axios(`https://api.github.com/users/${currentUser}`)
