@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import PropTypes from 'prop-types';
+import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { createUser } from '../actions/index';
 import '../styles/components.scss';
 
 config.autoAddCss = false;
@@ -67,16 +72,40 @@ const projects = [
 ];
 
 function SearchBar() {
+  const [user, setUser] = useState('');
+  const dispatch = useDispatch();
+  const handleSubmit = e => {
+    e.preventDefault();
+    axios(`https://api.github.com/users/${user}`)
+      .then(response => {
+        Swal.fire(
+          'Good job!',
+          `${response.data.name}`,
+          'success',
+        );
+        dispatch(createUser({ user: response.data.login, id: response.data.id }));
+      })
+      .catch(error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: `${error.response.data.message}`,
+        });
+      });
+    setUser('');
+  };
   return (
     <div className="column social-media">
-      <form className="field has-addons">
+      <form className="field has-addons" onSubmit={handleSubmit}>
         <input
           className="input"
           type="text"
+          value={user}
+          onChange={e => setUser(e.target.value)}
           placeholder="GitHub username"
           required
         />
-        <button className="button is-info" type="button">
+        <button className="button is-info" type="submit" value="Submit">
           Add card
         </button>
       </form>
@@ -125,6 +154,10 @@ function Bookmark() {
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export {
   Bookmark,
