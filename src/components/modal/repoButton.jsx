@@ -8,19 +8,17 @@ class RepoButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      repo: '',
+      repos: '',
     };
   }
 
   componentDidMount() {
     const { url } = this.props;
-    const { repo } = this.state;
     axios(url)
       .then(response => {
         this.setState({
-          repo: response.data,
+          repos: response.data,
         });
-        console.log(response.data);
       })
       .catch(error => {
         Swal.fire({
@@ -32,15 +30,19 @@ class RepoButton extends React.Component {
   }
 
   render() {
-    const { repo, url } = this.props;
+    const { url } = this.props;
+    const { repos } = this.state;
+    console.log(repos);
     return (
       <div>
         <section>
+          {repos.slice(0, 1).map(repo => (
+            <p key={repo.id}>{repo.id}</p>
+          ))}
           <button className="button is-warning" type="button" onClick={() => this.simpleDialog.show()}>View Repo</button>
         </section>
         <SkyLight hideOnOverlayClicked ref={ref => this.simpleDialog = ref} title="Hi, I'm a simple modal">
           <h1>Hello, I dont have any {url}.</h1>
-          <p>{repo}</p>
         </SkyLight>
       </div>
     );
@@ -49,7 +51,6 @@ class RepoButton extends React.Component {
 
 RepoButton.propTypes = {
   url: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
 };
 
 export default RepoButton;
