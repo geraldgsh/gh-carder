@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import '../styles/main.scss';
 
-import { Bookmark, SearchBar } from '../components/bookmark';
+import Bookmark from '../components/bookmark';
+import SearchBar from '../components/searchBar';
 import { logOut } from '../helpers/auth';
 import Followers from '../components/followers';
 import Following from '../components/following';

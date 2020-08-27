@@ -1,9 +1,9 @@
 .card-container {
   display: grid;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.4);
   grid-template-columns: repeat(auto-fill, minmax(260px, 6fr));
   grid-gap: 1em;
-  min-height: 90vh;
+  min-height: 110vh;
   padding: 10px 10px 10px 10px;
 }
 
@@ -26,6 +26,12 @@
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.desc {
+  font-family: sans-serif;
+  padding-top: 10px;
+  text-align: center;
 }
 
 input {

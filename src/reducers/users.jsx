@@ -5,7 +5,7 @@ const userReducer = (state = [], action) => {
     case CREATE_USER:
       return [...state, action.user];
     case REMOVE_USER:
-      return state.filter(user => user.id !== action.user.id);
+      return state.filter(user => user.uid !== action.user.uid);
     default:
       return state;
   }
