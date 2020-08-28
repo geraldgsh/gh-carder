@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import RepoButton from './modal/repoButton';
+import OrgButton from './modal/orgButton';
 import '../styles/components.scss';
 
 config.autoAddCss = false;
@@ -43,6 +44,7 @@ function Bookmark() {
           <div className="card-content">
             <div className="desc is-capitalized">
               <RepoButton url={user.user.repos_url} />
+              <OrgButton url={user.user.organizations_url} />
             </div>
           </div>
         </div>

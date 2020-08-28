@@ -77,3 +77,21 @@ p.subtitle {
 .card-content {
   height: 145px;
 }
+
+.card-context {
+  flex: auto;
+  height: 50px;
+}
+
+.org-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 6fr));
+  grid-gap: 1em;
+  min-height: 110vh;
+  padding: 10px 10px 10px 10px;
+}
+
+.repo-content {
+  background-color: rgba(0, 0, 0);
+  height: 100%;
+}
