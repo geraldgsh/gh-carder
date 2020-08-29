@@ -3,7 +3,6 @@ import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { act } from 'react-dom/test-utils';
-import { render, screen } from '@testing-library/react';
 import RepoButton from '../../components/modal/repoButton';
 
 const axios = require('axios');
