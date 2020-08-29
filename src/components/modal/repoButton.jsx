@@ -32,7 +32,6 @@ class RepoButton extends React.Component {
 
   render() {
     const { repos } = this.state;
-    console.log(repos);
     const dialog = {
       maxHeight: '100%',
       marginTop: '-400px',

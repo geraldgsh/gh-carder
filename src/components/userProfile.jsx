@@ -1,12 +1,11 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/userProfile.scss';
-
-const currentUser = localStorage.username;
+import '../styles/components.scss';
 
 function UserProfile() {
   const [user, setUser] = useState([]);
+  const currentUser = localStorage.username;
   useEffect(() => {
     axios(`https://api.github.com/users/${currentUser}`)
       .then(response => {
@@ -34,11 +33,11 @@ function UserProfile() {
             <h1 className="title has-text-black">{user.name}</h1>
             <h2 className="subtitle has-text-black">{user.company}</h2>
             <h3 className="subtitle has-text-black">{user.bio}</h3>
-            <p>
+            <p className="paragraph-style">
               <strong>{user.followers}</strong>
               &nbsp;followers
             </p>
-            <p>
+            <p className="paragraph-style">
               <strong>{user.following}</strong>
               &nbsp;following
             </p>

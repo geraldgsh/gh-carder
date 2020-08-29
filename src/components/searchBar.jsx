@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { createUser } from '../actions/index';
-import '../styles/components.scss';
 
 function SearchBar() {
   const [user, setUser] = useState('');
@@ -28,17 +27,21 @@ function SearchBar() {
   return (
     <div className="column social-media">
       <form className="field has-addons" onSubmit={e => handleSubmit(e)}>
-        <input
-          className="input"
-          type="text"
-          value={user}
-          onChange={e => setUser(e.target.value)}
-          placeholder="GitHub username"
-          required
-        />
-        <button className="button is-info" type="submit" value="Submit">
-          Add card
-        </button>
+        <div className="row">
+          <input
+            className="input"
+            type="text"
+            value={user}
+            onChange={e => setUser(e.target.value)}
+            placeholder="GitHub username"
+            required
+          />
+        </div>
+        <div className="row">
+          <button className="button is-info" type="submit" value="Submit">
+            Add card
+          </button>
+        </div>
       </form>
     </div>
   );

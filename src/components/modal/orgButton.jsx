@@ -58,7 +58,7 @@ class OrgButton extends React.Component {
                   </div>
                   <div className="card-context">
                     <div className="desc is-capitalized">
-                      <h3 className="title is-3 has-text-black">{org.login}</h3>
+                      <h3 className="title is-3 has-text-black login">{org.login}</h3>
                     </div>
                   </div>
                 </div>
