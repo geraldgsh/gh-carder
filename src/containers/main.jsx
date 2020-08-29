@@ -46,12 +46,6 @@ class Main extends Component {
   render() {
     const { error } = this.state;
     const sector = this.state.section;
-    let search;
-    if (sector.type.name === 'Bookmark') {
-      search = <SearchBar />;
-    } else {
-      search = null;
-    }
     return (
       <section className="hero is-info is-fullheight">
         <div className="hero-body">
@@ -90,7 +84,7 @@ class Main extends Component {
                       <div className="container is-fluid">
                         <div className="column">
                           <div className="row">
-                            {search}
+                            {sector.type.name === 'Bookmark' ? <SearchBar /> : null}
                           </div>
                         </div>
                       </div>
