@@ -1,13 +1,14 @@
 import userReducer from '../../Reducers/users';
 
-const initialState = {
-  pending: false,
-  categories: [],
-  error: undefined,
-};
+const newState = [{
+  uid: 1234,
+  user: 'geraldgsh',
+}];
 
-describe('update category', () => {
-  it('should fetch the categories', () => {
-    expect(userReducer(initialState, { type: 'FETCH_CATEGORIES_SUCCESS', categories: ['beef', 'chicken'] })).toEqual({ ...initialState, categories: ['beef', 'chicken'] });
+const action = { type: 'CREATE_USER' };
+
+describe('Add user', () => {
+  it('should add user', () => {
+    expect(userReducer(newState, action.type)).toEqual(newState, action.type);
   });
 });
