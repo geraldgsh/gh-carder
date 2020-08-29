@@ -14,7 +14,7 @@ function UserProfile() {
       .catch(error => {
         console.log(error.response);
       });
-  }, []);
+  }, [user, currentUser]);
 
   return (
     <div>

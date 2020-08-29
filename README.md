@@ -3,7 +3,7 @@ React
 
 ### Snapshot
 
-![](https://github.com/geraldgsh/react-valid-form/blob/development/src/assets/images/screenshot.JPG?raw=true)
+![]()
 
 ### Introduction.
 
