@@ -52,8 +52,7 @@ function Followers() {
             </div>
           </div>
           <div className="card-content">
-            <div className="desc is-capitalized">
-            </div>
+            <div className="desc is-capitalized" />
           </div>
         </div>
       ))}

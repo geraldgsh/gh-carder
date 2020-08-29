@@ -7,23 +7,6 @@ import rootReducer from './reducers/index';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const initialState = {
-  users: [
-    {
-      uid: Math.floor(Math.random() * 1000),
-      user: 'Angels and Demons',
-    },
-    {
-      uid: Math.floor(Math.random() * 1000),
-      user: 'Angel',
-    },
-    {
-      uid: Math.floor(Math.random() * 1000),
-      user: 'Buffy The Vampire Slayer',
-    },
-  ],
-};
-
 const store = createStore(rootReducer);
 window.store = store;
 
