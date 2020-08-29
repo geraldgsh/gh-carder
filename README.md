@@ -1,3 +1,27 @@
+# GH-Carder
+React
+
+### Snapshot
+
+![](https://github.com/geraldgsh/react-valid-form/blob/development/src/assets/images/screenshot.JPG?raw=true)
+
+### Introduction.
+
+A React sign up form that makes API calls with dynamic validator.
+
+### Tools
+
+* Node.js
+* React
+* React-DOM
+* React-Create-App
+* Firebase
+* npm
+* CSS
+* ES6
+* Webpack
+* SweetAlert2
+
 # React and Redux
 
 This is the **GitHub Actions configuration**. If you are looking for the **Stickler configuration**, you can find it [here](https://github.com/microverseinc/linters-config/tree/Stickler/react-redux).
@@ -93,3 +117,64 @@ added 136 packages from 91 contributors, removed 10 packages, updated 6 packages
 Feel free to add your own deployment actions which can run your tests and deploy to Heroku.
 
 Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) but that you create a separe GitHub Action workflow file for that.
+
+### Future Features
+
+* Channels
+
+### To begin
+
+1. Clone Repo
+2. 'npm install' to install dependencies
+3. `yarn start` or 'npm start' on terminal
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### To test
+
+1. `yarn test` or 'npm test' on terminal
+
+### Wiki
+
+Checkout our [wikipage](https://github.com/geraldgsh/gh-carder/wiki) for more details. 
+
+#### Live Demo
+[Demo](https://gh-carder.netlify.com)
+
+#### Getting Started
+Clone repo and open index.html with your favorite browser.
+
+#### Prerequisites
+Web browser like Chrome, Mozilla or similar.
+
+### Original Project Source
+
+
+### Github Repo
+https://github.com/geraldgsh/gh-carder
+
+👤 **Author**
+
+Github: [geraldgsh](https://github.com/geraldgsh)
+
+Twitter: [geraldgsh](https://twitter.com/geraldgsh)
+
+Linkedin: [Gerald Goh](https://www.linkedin.com/geraldgsh)
+
+## 🤝 Contributing
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/geraldgsh/gh-carder/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
