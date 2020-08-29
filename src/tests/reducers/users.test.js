@@ -1,4 +1,5 @@
-import userReducer from '../../Reducers/users';
+/* eslint-disable import/extensions */
+import userReducer from '../../Reducers/users.jsx';
 
 const newState = [{
   uid: 1234,
