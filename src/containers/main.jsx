@@ -14,6 +14,7 @@ class Main extends Component {
     super(props);
     this.state = {
       section: <Bookmark />,
+      search: <SearchBar />,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -23,14 +24,17 @@ class Main extends Component {
     if (sector === 'Following') {
       this.setState(() => ({
         section: <Following />,
+        search: '',
       }));
     } else if (sector === 'Followers') {
       this.setState(() => ({
         section: <Followers />,
+        search: '',
       }));
     } else {
       this.setState(() => ({
         section: <Bookmark />,
+        search: <SearchBar />,
       }));
     }
   }
@@ -46,6 +50,7 @@ class Main extends Component {
   render() {
     const { error } = this.state;
     const sector = this.state.section;
+    const searchArea = this.state.search;
     return (
       <section className="hero is-info is-fullheight">
         <div className="hero-body">
@@ -84,7 +89,7 @@ class Main extends Component {
                       <div className="container is-fluid">
                         <div className="column">
                           <div className="row">
-                            {sector.type.name === 'Bookmark' ? <SearchBar /> : null}
+                            {searchArea}
                           </div>
                         </div>
                       </div>
