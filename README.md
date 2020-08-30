@@ -21,6 +21,7 @@ A web application that retrieves and displays the user's repositories and organi
 * ES6
 * Webpack
 * SweetAlert2
+* Jest
 
 # React and Redux
 
