@@ -16,6 +16,7 @@ A web application that retrieves and displays the user's repositories and organi
 * React-DOM
 * React-Create-App
 * Firebase
+* Jest
 * npm
 * CSS
 * ES6
