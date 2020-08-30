@@ -1,13 +1,13 @@
 # GH-Carder
-React
+React and Redux
 
 ### Snapshot
 
-![]()
+![](https://github.com/geraldgsh/gh-carder/blob/development/public/screenshot.JPG)
 
 ### Introduction.
 
-A React sign up form that makes API calls with dynamic validator.
+A web application that retrieves and displays the user's repositories and organizations that he/she belongs to in Github. Allow list followers and followings on separate pages.
 
 ### Tools
 
@@ -120,7 +120,8 @@ Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/w
 
 ### Future Features
 
-* Channels
+1. Persistent storage of bookmarks with Firebase DB
+2. Feature to remove bookmarks
 
 ### To begin
 
