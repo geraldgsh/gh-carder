@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import RepoButton from './modal/repoButton';
 import OrgButton from './modal/orgButton';
+import { removeUser } from '../actions/index';
 import '../styles/components.scss';
 
 config.autoAddCss = false;
@@ -12,6 +13,7 @@ library.add(fab);
 
 function Bookmark() {
   const users = useSelector(state => state.users);
+  const dispatch = useDispatch();
   return (
     <div id="list" className="card-container">
       {users.map(user => (
@@ -20,6 +22,9 @@ function Bookmark() {
             <div className="avatar-header">
               <div className="container has-text-centered">
                 <div className="column pale">
+                  <div className="has-text-right">
+                    <button className="delete is-small" label="delete" type="button" onClick={() => dispatch(removeUser(user))} />
+                  </div>
                   <br />
                   <div className="boxster">
                     <figure className="avatar image is-128x128">
